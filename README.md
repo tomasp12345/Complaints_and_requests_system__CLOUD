@@ -52,6 +52,15 @@ not on every token refresh.
 - One long word wrecking the layout. A test comment with a few hundred characters and no spaces pushed an entire panel off screen.
 This one looks stupid, but i was just seeing my panel disappear becasuse that one long comment was at the bottom of the page were i wasnt looking and i didnt even consider it. Classic CSS grid `min-width` trap — fixed with `min-width: 0` on the grid children plus `overflow-wrap`.
 
+## Some screenshots of the app already deployed (only temporal info for tests is displayed)
+<img width="2552" height="1350" alt="image" src="https://github.com/user-attachments/assets/66f32831-3dfb-4774-a09b-bbecb78c6fde" />
+
+<img width="2089" height="1107" alt="image" src="https://github.com/user-attachments/assets/b901099d-d449-444d-875f-3be77ed85d14" />
+
+<img width="1341" height="1148" alt="image" src="https://github.com/user-attachments/assets/8ed0eb70-4891-498b-b1cf-2532ab0ef967" />
+
+
+
 ## What I'd do next
 
 - Email alerts for tickets about to hit their deadline

@@ -2,7 +2,7 @@
 
 This repo showcases my experience developing a complaints-and-requests management system I built for a Colombian logistics
 company. While i cannot share the code, i can and will share my developement process. 
-"PQRS" stands for *Peticiones, Quejas, Reclamos y Sugerencias* — the formal channel companies here use to track customer requests and complaints.
+"PQRS" stands for Peticiones, Quejas, Reclamos y Sugerencias — the formal channel companies here use to track customer requests and complaints.
 
 The source code is in a private repo since it's an internal tool for a real company, so this README is a walkthrough of what I built and the decisions
 behind it rather than the code itself. Happy to go through it in an interview.
@@ -13,7 +13,7 @@ behind it rather than the code itself. Happy to go through it in an interview.
 - Register a PQRS with customer data, type, channel and file attachments
 - Assign it: owner, area, priority and a response deadline
 - Move it through states (New → Under review → In progress → … → Closed / Overdue)
-- Full audit trail — every change records **who**, **when** and **what** changed
+- Full audit trail — every change records who, when and what changed
 - In-app notifications (new ticket, assignment, resolved/closed)
 - Reports: tickets this month, open, overdue, average response time, plus
   breakdowns by type / status / owner

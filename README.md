@@ -1,8 +1,8 @@
 # PQRS System — Transportes RG
 
 This repo showcases my experience developing a complaints-and-requests management system I built for a Colombian logistics
-company. While i cannot share the code, i can and will share my developement process. 
-"PQRS" stands for Peticiones, Quejas, Reclamos y Sugerencias — the formal channel companies here use to track customer requests and complaints.
+company.  "PQRS" stands for Peticiones, Quejas, Reclamos y Sugerencias — the formal channel companies here use to track customer 
+requests and complaints.
 
 The source code is in a private repo since it's an internal tool for a real company, so this README is a walkthrough of what I built and the decisions
 behind it rather than the code itself. Happy to go through it in an interview.

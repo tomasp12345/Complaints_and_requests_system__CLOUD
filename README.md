@@ -72,3 +72,6 @@ This one looks stupid, but i was just seeing my panel disappear becasuse that on
 This was my first time using Supabase and deploying something end to end. When i was asked to do this i genuinely thought there was
 no way i was going to be able to do it, but after learning about supabase and vercel it was fairly easy with all the online information 
 (also,  probably thanks to this project being a system that only a few people will use and not a hundred-thousand user project).
+
+## Email Update
+Before the update, the users were manually created by me. I now send the link using the employees emails giving the the chance of creating passwords without me knowing them to protect their privacy and i also added a "forgot password". To achieve this, i wired up a custom smtp because supabase was just letting me send 2 emails. I also used another github branch since "main" was directly connected to vercel so to test the deployed app without affecting production i used the master branch.

@@ -30,6 +30,13 @@ más que como una documentación directa del código. Estoy dispuesto a explicar
 * Hosting: Vercel, con despliegue automático desde GitHub para mantener la aplicación disponible fácilmente y sin costo adicional.
 * Backups automatizados:** GitHub Actions ejecutando un `pg_dump` programado para generar backups diarios de forma automatica.
 
+## Seguridad
+* Vercel se encarga de https para comunicacion con el sitio (comunicación cifrada y certificados), además de protección contra DDOS. 
+* Supabase se encarga de https para comunicacion con base de datos, encriptar contraseñas y manejo de tokens. RLS. Proteccion contra
+  inyccion sql (consultas parametrizadas).
+* Yo me encargue de proteccion contra inyección xss en el código, escribimos reglas del RLS, historial a prueba de manipulación,
+  manejo de cuentas de usuarios (invitar, eliminar, banear), respaldos automáticos.
+
 ## Decisiones técnicas de las que estoy satisfecho
 
 * Historial de auditoría a nivel de base de datos. 
@@ -94,3 +101,14 @@ Este fue mi primer proyecto usando Supabase y desplegando una aplicación comple
 Cuando me pidieron desarrollar este sistema, honestamente pensé que no iba a ser capaz de hacerlo. Sin embargo, después de aprender sobre Supabase, Vercel y despliegues en la nube, el proceso terminó siendo mucho más alcanzable de lo que imaginaba.
 
 También ayudó que el sistema estuviera pensado para un equipo pequeño de usuarios y no para una aplicación de cientos de miles de personas. Aun así, el proyecto me permitió aprender mucho sobre autenticación, seguridad, base de datos, triggers, despliegue, backups automatizados y manejo de errores reales en producción.
+
+## Actualización 1: correos y contraseñas
+
+Inicialmente, los usuarios eran creados manualmente por mí. Sin embargo, actualicé el sistema para mejorar la privacidad y la experiencia de los empleados.
+Ahora envío un enlace al correo de cada empleado para que pueda crear su propia contraseña sin que yo tenga que conocerla. 
+También agregué la opción de “olvidé mi contraseña”, permitiendo que los usuarios puedan recuperar el acceso a su cuenta de forma independiente.
+
+Para lograrlo, configuré un SMTP personalizado, ya que Supabase solo me permitía enviar una cantidad muy limitada de correos desde su configuración por defecto. Con esta integración, el sistema puede enviar correos de invitación y recuperación de contraseña correctamente.
+
+Además, utilicé una rama adicional en GitHub para hacer pruebas. Como la rama `main` estaba conectada directamente a Vercel y desplegaba la versión de producción, usé la rama `master` para probar los cambios en la aplicación desplegada sin afectar el sistema que ya estaba en uso.
+

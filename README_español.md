@@ -11,7 +11,7 @@ más que como una documentación directa del código. Estoy dispuesto a explicar
 
 ## Qué hace el sistema
 
-* Cada empleado inicia sesión con su propia cuenta, la cual puede crear a partir de un link de invitacion. En caso de olvidarla cuenta con
+* Cada empleado inicia sesión con su propia cuenta.
   un espacio de "olvide mi contraseña" que envia un correo para restaurar contraseña.
 * Permite registrar una PQRS con datos del cliente, tipo de solicitud, canal de recepción y archivos adjuntos.
 * Permite asignar cada caso a un responsable, área, prioridad y fecha límite de respuesta.
